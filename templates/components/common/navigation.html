@@ -1,0 +1,78 @@
+<!--<nav class="navUser">
+    {{> components/common/currency-selector}}
+</nav>-->
+
+<div class="header-top">
+    <div class="containerC d-flex">
+        <div class="site-brand">
+            {{> components/common/store-logo}}
+        </div>
+        <div>
+            <div class="site-slogan">
+                <span class="slogan-icon icons"></span>
+                <h4 class="slogan-title">Free Shipping. 100 Night Trial</h4>
+            </div>
+        </div>
+        <div class="header-btns-block d-flex">
+            <div class="search-box">
+                <button class="btns search-btn icons"></button>
+            </div>
+            <div id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+                {{> components/common/quick-search}}
+            </div>
+
+            {{#if settings.gift_certificates_enabled}}
+            <div class="gift-box">
+                <a href="{{urls.gift_certificate.purchase}}">
+                    <button class="btns-icon gift-btn icons"></button>
+                </a>
+            </div>
+            {{/if}}
+            <div class="signin-box">
+                {{#if customer}}
+                <button class="grey-btn signin-btn user_account">
+                    <a href="{{urls.account.index}}">{{lang 'common.account'}}</a> <span
+                        class="icons user-icon"></span>
+                </button>
+                <button class="grey-btn signin-btn">
+                    <a href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a> <span
+                        class="icons user-icon"></span>
+                </button>
+                {{else}}
+                <button class="grey-btn signin-btn">
+                    <a href="{{urls.auth.login}}">{{lang 'common.login'}}</a><span class="icons user-icon"></span>
+                </button>
+                {{/if}}
+            </div>
+            <div class="basket-box">
+                <a
+                        class="navUser-action"
+                        data-cart-preview
+                        data-dropdown="cart-preview-dropdown"
+                        data-options="align:right"
+                        href="{{urls.cart}}">
+                    <span class="navUser-item-cartLabel"><button class="btns-icon basket-btn icons"></button></span>
+                    <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                </a>
+
+                <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content
+                     aria-hidden="true"></div>
+            </div>
+            <!--<div class="lang-box">
+                <button class="btns-icon lang-btn icons"></button>
+            </div>-->
+            <a class="navUser-action navUser-item--compare" href="{{urls.compare}}" data-compare-nav>{{lang 'common.compare'}} <span class="countPill countPill--positive countPill--alt"></span></a>
+            {{#if customer.store_credit.value '>' 0}}
+                <a class="navUser-action navUser-action--storeCredit"
+                   data-dropdown="storeCredit-dropdown"
+                   data-options="align:bottom"
+                   href="{{urls.cart}}">
+                    <span class="navUser-action-divider">{{lang 'common.store_credit_overview' credit=customer.store_credit.formatted}}</span>
+                </a>
+                <div class="dropdown-menu" id="storeCredit-dropdown" data-dropdown-content aria-hidden="true">
+                    {{{lang 'common.store_credit' store_credit=customer.store_credit.formatted}}}
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

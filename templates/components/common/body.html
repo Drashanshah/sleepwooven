@@ -1,0 +1,15 @@
+{{#if page_type '==' 'default' }}
+        {{#block "page"}} {{/block}}
+        {{> components/common/modal}}
+{{else if page_type '==' 'category'}}
+        {{#block "page"}} {{/block}}
+        {{> components/common/modal}}
+{{else}}
+<div class="body">
+    <div class="">
+        {{#block "page"}} {{/block}}
+    </div>
+    {{> components/common/modal}}
+</div>
+{{/if}}
+

@@ -1,0 +1,162 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+
+
+
+
+<div class="main full">
+    <div class="category-top-banner" style="background: url({{getImage category.image 'zoom_size'}})no-repeat center/cover transparent;">
+        <div class="containerC d-flex">
+            <div class="home-banner-img cat-wrapper-container">
+                <div class="cat-wrapper">
+                    <h2 class="category_heading">High Quality Bed Linen</h2>
+                    <p class="cat_price">From $125 USD</p>
+                    <p class="cat_desc">The best hotels in the world such as Westin and Ritz Carlton have wonderful bedding that gives every guest a
+                        well-rested experience.
+                    </p>
+                    <p class="cat_desc">Now you can feel like that every day in the comfort of your home</p>
+
+                </div>
+                <a href="/bedding" class="header-shop-now cat-wrapper-btn">
+                    <button class="btns shop-now-btn">View All Products</button>
+                </a>
+            </div>
+            <div class="arrow-section">
+                <div class="arrow-block arrow-1">
+                    <div class="circle">
+                        <div class="circle-sm"></div>
+                    </div>
+                    <div class="arrow-box">
+                         Oxford Style Pillowcase
+                    </div>
+                </div>
+                <div class="arrow-block arrow-2">
+                    <div class="arrow-box arrow-box-bottom">
+                            <span class="arrow-text">Bedsheet</span>
+                    </div>
+                    <div class="circle">
+                        <div class="circle-sm"></div>
+                    </div>
+                </div>
+                <div class="arrow-block arrow-3">
+                    <div class="arrow-box arrow-box-bottom">
+                            <span class="arrow-text">Duvet Cover</span>
+                    </div>
+                    <div class="circle">
+                        <div class="circle-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+
+
+{{{snippet 'categories'}}}
+<div class="page container">
+    <div class="title-filter">
+        <h1 class="page-heading">{{category.name}}</h1>
+        <button class="btns filter-btn">Filter</button>
+    </div>
+    <main class="page-content" id="product-listing-container">
+        {{#if category.products}}
+            {{> components/category/product-listing}}
+        {{else}}
+            <p>{{lang 'categories.no_products'}}</p>
+        {{/if}}
+    </main>
+</div>
+
+
+<div class="category-throw-blanket">
+    <div class="containerC">
+        <div class="main-row">
+            <div class="half-box half-box-txt ">
+                <h2 class="main-title">About Our Bed Linen</h2>
+                <p>
+                    The best hotels in the world such as Westin and Ritz Carlton have wonderful bedding that gives every guest a well-rested experience.
+                </p>
+                <p>
+                    Now you can feel like that every day in the comfort of your home.
+                </p>
+                <p>
+                    We at Wooven® think that everyone should have access to fine linen at a reasonable price. We searched among thousands of sources to find the same vendors the finest hotels in the world use.
+                </p>
+                <a href="/bedding">
+                    <button class="btns shop-now-btn">Read More</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="design-standards">
+    <div class="containerC">
+        <h2 class="main-title">Our Design Standards</h2>
+        <div class="design-standards--row d-flex">
+            <div class="design-standards--box">
+                <div class="design-standards--icon soft-silki"></div>
+                <div class="design-standards--txt">
+                    <h3 class="design-standards--title">Soft & Silky</h3>
+                    <p>
+                        Feel the difference of softness and comfort the moment you touch the bed sheets. Made with
+                        the finest cotton fibers and woven with proprietary techniques, our bedding is noticeably
+                        superior to comparable brands.
+                    </p>
+                </div>
+            </div>
+            <div class="design-standards--box">
+                <div class="design-standards--icon breathable"></div>
+                <div class="design-standards--txt">
+                    <h3 class="design-standards--title">Breathable</h3>
+                    <p>
+                        We only use 100% Long Staple cotton in all our bed linens. Combined with specialised weaving
+                        techniques, our bed sheets are breathable and allow good air circulation for the perfect
+                        night's sleep.
+                    </p>
+                </div>
+            </div>
+            <div class="design-standards--box">
+                <div class="design-standards--icon hotel-quality"></div>
+                <div class="design-standards--txt">
+                    <h3 class="design-standards--title">Hotel Quality</h3>
+                    <p>
+                        The same quality bed linens are used and trusted by luxury hotels such as Four Seasons and
+                        Ritz Carlton.
+                    </p>
+                </div>
+            </div>
+            <div class="design-standards--box">
+                <div class="design-standards--icon eco-friendly"></div>
+                <div class="design-standards--txt">
+                    <h3 class="design-standards--title">Eco Friendly </h3>
+                    <p>
+                        Committed to saving the environment from further damage, we only use environmentally
+                        low-impact dyes that comply with strict EU regulations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{/partial}}
+{{> layout/base}}

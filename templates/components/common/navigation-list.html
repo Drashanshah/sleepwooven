@@ -1,0 +1,37 @@
+{{#if children}}
+<a href="{{url}}" data-collapsible="navPages-{{id}}">
+    {{name}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+</a>
+<div class="navPage-subMenu" id="navPages-{{id}}" aria-hidden="true" tabindex="-1">
+    <ul class="dropdown-menu navPage-subMenu-list">
+        <li>
+            <a href="{{url}}">{{lang 'category.view_all.name' category=name}}</a>
+        </li>
+        {{#each children}}
+            <li>
+                {{#if children}}
+                    <a
+                        href="{{url}}"
+                        data-collapsible="navPages-{{id}}"
+                        data-collapsible-disabled-breakpoint="medium"
+                        data-collapsible-disabled-state="open"
+                        data-collapsible-enabled-state="closed">
+                        {{name}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+                    </a>
+                    <ul id="navPages-{{id}}">
+                        {{#each children}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <a href="{{url}}">{{name}}</a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+{{else}}
+<a href="{{url}}">{{name}}</a>
+{{/if}}

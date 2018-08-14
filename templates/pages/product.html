@@ -1,0 +1,55 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{#partial "page"}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+    {{#each product.shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+    
+
+    <div itemscope itemtype="http://schema.org/Product" class="container">
+        
+        {{> components/products/product-view schema=true}}
+
+        {{> components/products/tabs}}
+
+        {{#if product.videos.list.length}}
+            {{> components/products/videos product.videos}}
+        {{/if}}
+    </div>
+
+        {{> components/products/standards}}
+
+        {{> components/products/faq}}
+
+        {{#if settings.show_product_reviews}}
+            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+        {{/if}}
+
+    <div class="container">
+        <div class="yotpo yotpo-main-widget"
+             data-product-id="{{ product.id }}"
+             data-price="{{ product.price.without_tax.value }}"
+             data-currency="{{ currency_selector.active_currency_code }}"
+             data-name="{{ product.title }}"
+             data-url="{{ product.url }}"
+             data-image-url="{{getImage product.main_image}}"
+             data-description="{{ product.description }}">
+        </div>
+    </div>
+
+
+
+{{/partial}}
+
+{{> layout/base}}

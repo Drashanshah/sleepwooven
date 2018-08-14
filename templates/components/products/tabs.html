@@ -1,0 +1,37 @@
+<div class="pr-tabs-content d-flex">
+    <div class="pr-size-guide half-box">
+        <div class="titleLine">
+            <span class="size-guide-icon tab-icon"></span>
+            <h2 class="pr-tab-title">Size Guide</h2>
+        </div>
+        <label class="form-label">Size Guide</label>
+        <div class="switchSizes">
+            <input type="radio" name="tab" value="inch" checked="checked" class="inchesClick"> Inches
+            <input type="radio" name="tab" value="cm" class="cmClick"> CM
+        </div>
+        <div id="tables-content">
+
+        </div>
+    </div>
+
+    <div class="pr-specifications  half-box">
+        <div class="titleLine">
+            <span class="specification-icon tab-icon"></span>
+            <h2 class="pr-tab-title">Specifiactions</h2>
+        </div>
+        <label class="form-label">Order Includes</label>
+        <div class="specContent">
+            {{#if product.custom_fields}}
+                {{#each product.custom_fields}}
+                    {{#if this.name '==' 'includes'}}
+                        <p class="specInclude">{{{this.value}}}</p>
+                    {{/if}}
+                    {{#if this.name '==' 'feature'}}
+                        <p class="specTick"><span></span>{{{this.value}}}</p>
+                    {{/if}}
+                {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+

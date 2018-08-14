@@ -1,0 +1,68 @@
+
+{{#if product_sku '===' 'custom-F'}}
+
+<form class="form-custom-size-container">
+
+        <label class="form-label form-label--alternate form-label--inlineSmall" for="cust-length}">
+	        Length:
+	            <small>up to 110 inches</small>
+	    </label>
+<!-- 	    <input class="form-custom-size form-input" type="number" step="any" name="cust-length" 
+	    value="20"
+	    min="1" max="110"
+	    data-validation="customLegth" required> -->
+
+    	<select class="form-select form-select--small" name="cust-length" required>
+    		<option value="">select a size...</option>
+    		{{#for 1 100}}
+    			<option value="{{$index}}">{{$index}}</option>
+    		{{/for}}
+    		{{#for 101 110}}
+    			<option value="{{$index}}">{{$index}}</option>
+    		{{/for}}
+	    </select>
+
+
+	    <label class="form-label form-label--alternate form-label--inlineSmall" for="cust-width">
+	        Width:
+	            <small>up to 104 inches</small>
+	    </label>
+
+<!-- 	    <input class="form-custom-size form-input" type="number" step="any" name="cust-width"
+	    value="30"
+	    min="1" max="104"
+	    required 
+	    > -->
+
+	    <select class="form-select form-select--small" name="cust-width" required>
+    		<option value="">select a size...</option>
+    		{{#for 1 100}}
+    			<option value="{{$index}}">{{$index}}</option>
+    		{{/for}}
+    		{{#for 101 104}}
+    			<option value="{{$index}}">{{$index}}</option>
+    		{{/for}}
+	    </select>
+
+
+	    <label class="form-label form-label--alternate form-label--inlineSmall" for="cust-depth">
+	        Depth:
+	            <small>up to 22 inches</small>
+	    </label>
+
+<!-- 	    <input class="form-custom-size form-input" type="number" step="any" name="cust-depth" 
+	    value="30"
+	    min="1" max="22"
+	    required 
+	    > -->
+
+	    <select class="form-select form-select--small" name="cust-depth" required>
+    		<option value="">select a size...</option>
+    		{{#for 1 22}}
+    			<option value="{{$index}}">{{$index}}</option>
+    		{{/for}}
+	    </select>
+
+</form>
+
+{{/if}}

@@ -1,0 +1,50 @@
+<div class="form-field" data-product-attribute="textarea">
+    <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_{{id}}">
+        {{display_name}}:
+
+        {{#if required}}
+            <small>{{lang 'common.required'}}</small>
+        {{/if}}
+    </label>
+        
+
+    {{#if display_name '===' 'Custom Size'}}
+
+	    <p>{{display_name}} smfkfn {{validation}}</p>
+
+    	<textarea hidden class="form-input hidden" id="attribute_{{id}}" name="attribute[{{id}}]" {{#if required}}required{{/if}}>
+	        {{prefill}}
+	    </textarea>
+
+<!--         <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_{{id}}">
+	        Length:
+	            <small>between 0 and 100 inches</small>
+	    </label>
+
+	    <input class="form-input" type="number" step="any" name="attribute[{{this.id}}]" value="20" data-validation="customLegth" {{#if required}}required{{/if}}>
+
+	    <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_{{id}}">
+	        Width:
+	            <small>between 0 and 100 inches</small>
+	    </label>
+
+	    <input class="form-input" type="number" step="any" name="attribute[{{this.id}}]" value="30" {{#if required}}required{{/if}}>
+
+	    <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_{{id}}">
+	        Depth:
+	            <small>between 0 and 18 inches</small>
+	    </label>
+
+	    <input class="form-input" type="number" step="any" name="attribute[{{this.id}}]" value="40" {{#if required}}required{{/if}}> -->
+
+
+    {{else}}
+
+	    <textarea class="form-input" id="attribute_{{id}}" name="attribute[{{id}}]" {{#if required}}required{{/if}}>
+	        {{prefill}}
+	    </textarea>
+
+    {{/if}}
+
+
+</div>

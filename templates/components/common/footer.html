@@ -1,0 +1,100 @@
+{{#if banners.bottom}}
+<div class="banners" data-banner-location="bottom">
+    <div class="banner">
+        {{{limit banners.bottom 1}}}
+    </div>
+</div>
+{{/if}}
+
+<footer class="site-footer footer" role="contentinfo">
+    <div class="containerC">
+        <div class="top-footer d-flex">
+            <div class="footer-lists">
+                <a href="{{urls.home}}">
+                    <img src="{{cdn 'img/img/logo-wt.png'}}" alt="Sleep Woover" class="img-responsive">
+                </a>
+            </div>
+            <ul class="footer-lists">
+                <li class="footer-lists--heading">About Us</li>
+                <li>
+                    <a href="/our-design-story">Our Design Story</a>
+                </li>
+                <li>
+                    <a href="/shipping-returns/">Shipping & Returns</a>
+                </li>
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li>
+                    <a href="/contact-us/">Contact us </a>
+                </li>
+            </ul>
+            <ul class="footer-lists">
+                <li class="footer-lists--heading">{{lang 'footer.categories'}}</li>
+                {{#each categories}}
+                <li>
+                    <a href="{{url}}">{{name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+            <div class="footer-lists footer-subscribe-form">
+                {{#if settings.show_newsletter_box}}
+                {{> components/common/subscription-form}}
+                {{/if}}
+            </div>
+            <ul class="footer-lists footer-social-link">
+                <li>
+                    <a href="https://www.facebook.com/sleepwooven/" target="_blank">
+                        <span class="social-icon facebook"></span>
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sleepwooven/" target="_blank">
+                        <span class="social-icon instagram"></span>
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/sleepwooven/" target="_blank">
+                        <span class="social-icon linkedIn"></span>
+                        LinkedIn
+                    </a>
+                </li>
+                <!--<li>
+                    <a href="#">
+                        <span class="social-icon youtube"></span>
+                        Youtube
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="bottom-footer">
+            <div class="card-box">
+                <!--{{> components/common/payment-icons}}-->
+                <script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.sleepwooven.com&amp;size=M&amp;lang=en"></script>
+               <!--<a href="http://www.geotrust.com/ssl/" target="_blank" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications.">
+                    <img src="{{cdn 'img/img/secured-by.png'}}" alt="secured" class="img-responsive">
+                </a>-->
+
+                <img src="{{cdn 'img/img/visa.png'}}" alt="visa" class="img-responsive">
+                <img src="{{cdn 'img/img/master-card.png'}}" alt="master card" class="img-responsive">
+                <img src="{{cdn 'img/img/american-express.png'}}" alt="american express" class="img-responsive">
+                <img src="{{cdn 'img/img/paypal.png'}}" alt="paypal" class="img-responsive">
+            </div>
+            {{#if theme_settings.show_copyright_footer}}
+            <ul class="bottom-footer-list">
+                <li>© {{settings.store_name}}. All Rights Reserved {{moment format="YYYY"}}.</li>
+                <li>
+                    <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </li>
+            </ul>
+            {{/if}}
+
+        </div>
+    </div>
+</footer>

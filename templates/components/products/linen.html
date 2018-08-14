@@ -1,0 +1,7 @@
+<h2 class="main-title">Featured Bed Linen</h2>
+
+<div class="features-bed-linen--row d-flex">
+    {{#each products}}
+        {{>components/products/card_linen theme_settings=../theme_settings customer=../customer}}
+    {{/each}}
+</div>

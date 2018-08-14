@@ -1,0 +1,1343 @@
+//colors
+$color_tundora_approx: #464646;
+$white: #ffffff;
+$color_silver_chalice_approx: #ababab;
+$color_tangerine_approx: #e48d00;
+$color_alabaster_approx: #f9f9f9;
+$color_dove_gray_approx: #717171;
+$seashell: #f1f1f1;
+$color_heavy_metal_approx: #2c2c2c;
+$color_akaroa_approx: #d6c3a5;
+$alabaster: #fafafa;
+$color_celeste_approx: #ccc;
+$color_shady_lady_approx: #a5a5a5;
+$color_gravel_approx: #474747;
+$text_color_dark: #1e191a;
+
+//fonts
+$font_0: Myriad-Pro;
+$font_1: Roboto-Regular;
+$font_2: Oswald-Regular;
+
+//urls
+$url_0: url(../fonts/fonts/MyriadPro-Regular/MyriadPro-Regular.eot);
+$url_1: url(../fonts/fonts/MyriadPro-Regular/MyriadPro-Regular.eot?#iefix);
+$url_2: url(../fonts/fonts/MyriadPro-Regular/MyriadPro-Regular.woff);
+$url_3: url(../fonts/fonts/MyriadPro-Regular/MyriadPro-Regular.ttf);
+$url_4: url(../fonts/fonts/MyriadPro-Regular/MyriadPro-Regular.svg#svgFontName);
+$url_5: url(../fonts/fonts/Roboto-Regular/Roboto-Regular.eot);
+$url_6: url(../fonts/fonts/Roboto-Regular/Roboto-Regular.eot?#iefix);
+$url_7: url(../fonts/fonts/Roboto-Regular/Roboto-Regular.woff);
+$url_8: url(../fonts/fonts/Roboto-Regular/Roboto-Regular.ttf);
+$url_9: url(../fonts/fonts/Roboto-Regular/Roboto-Regular.svg#svgFontName);
+$url_10: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.eot);
+$url_11: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.eot?#iefix);
+$url_12: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.woff);
+$url_13: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.ttf);
+$url_14: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.svg#svgFontName);
+$url_15: url(../img/img/icons.png);
+$url_16: url(../img/img/home-top-banner.jpg);
+$url_17: url(../img/img/bedsheet-set-cover.jpg);
+$url_18: url(../img/img/sale-bg.png);
+$url_19: url(../img/img/lounge-throw-blanket.jpg);
+$url_20: url(../img/img/instalogo.png);
+$url_21: url(../img/img/bed-product-01.jpg);
+$url_22: url(../img/img/cat-bedsheet-set-cover.jpg);
+
+//@extend-elements
+//original selectors
+//.grey-btn, .grey-btn:hover
+%extend_1 {
+  display: inline-block;
+  background: $color_tundora_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  color: $white;
+  border: 0 none;
+  padding: 8px 14px;
+}
+
+//original selectors
+//.slide-box .owl-prev, .slide-box .owl-next
+%extend_2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 117px !important;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font: 16px $font_0;
+  color: $color_tundora_approx;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0;
+  color:unset;
+  margin-bottom:0;
+  letter-spacing: 0;
+}
+p {
+  margin-bottom: 0;
+}
+ul {
+  margin-left: 0;
+}
+ul, ol, dl {
+  margin-bottom: 0;
+}
+@font-face {
+  font-family: $font_0;
+  src: $url_0;
+  src: $url_1 format('embedded-opentype'), $url_2 format('woff'), $url_3 format('truetype'), $url_4 format('svg');
+}
+@font-face {
+  font-family: $font_1;
+  src: $url_5;
+  src: $url_6 format('embedded-opentype'), $url_7 format('woff'), $url_8 format('truetype'), $url_9 format('svg');
+}
+@font-face {
+  font-family: $font_2;
+  src: $url_10;
+  src: $url_11 format('embedded-opentype'), $url_12 format('woff'), $url_13 format('truetype'), $url_14 format('svg');
+}
+.img-responsive {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.containerC {
+  width: 1170px;
+  margin: auto;
+}
+.d-flex {
+  display: flex;
+}
+.main-row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.half-box {
+  max-width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+.icons {
+  display: inline-block;
+  background: $url_15 no-repeat transparent;
+}
+.grey-btn {
+  @extend %extend_1;
+  &:hover {
+    @extend %extend_1;
+    opacity: .8;
+  }
+}
+.btns {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all .3s ease-in-out .3s;
+}
+.bordered-btn {
+  display: inline-block;
+  background: transparent;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  color: $color_silver_chalice_approx;
+  border: 1px solid;
+  padding: 8px 14px;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: none;
+  &:hover {
+    color: $white;
+    background: $color_silver_chalice_approx;
+  }
+}
+.btns-icon {
+  border: 0 none;
+  background-color: transparent;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+}
+.main-title {
+  font: 28px $font_2;
+  text-transform: uppercase;
+  color: $color_tundora_approx;
+}
+.shop-now-btn {
+  min-width: 8.03vw;
+  background: $color_tangerine_approx;
+  border: 1px solid $color_tangerine_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  color: $white;
+  padding: 8px 14px;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: none;
+  &:hover {
+    color: $color_tangerine_approx;
+    background: transparent;
+  }
+}
+.site-slogan {
+  background: $color_alabaster_approx;
+  padding: 6px 14px;
+  min-width: 270px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  color: $color_dove_gray_approx;
+}
+.slogan-icon {
+  width: 30px;
+  height: 25px;
+  background-position: 0 0;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.slogan-title {
+  font: 500 15px $font_0;
+  vertical-align: middle;
+  display: inline-block;
+}
+.header-top {
+  padding: 20px 0;
+  .d-flex {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.search-btn {
+  width: 34px;
+  height: 34px;
+  background-color: $color_alabaster_approx;
+  background-position: 8px -177px;
+  border: 0 none;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+}
+#quickSearch{
+  display: none;
+}
+.gift-btn {
+  width: 34px;
+  height: 34px;
+  background-position: -101px 2px;
+}
+.signin-box{
+  display: flex;
+}
+.singnOrRegister{
+  margin:0 5px;
+}
+.signin-btn {
+  height: 34px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  font: 14px $font_1;
+}
+.user_account{
+  margin-right: 5px;
+}
+.user-icon {
+  width: 15px;
+  height: 15px;
+  background-position: -42px -185px;
+  margin-left: 30px;
+}
+.basket-btn {
+  width: 34px;
+  height: 34px;
+  background-position: -205px 0;
+}
+.lang-btn {
+  background-color: $color_alabaster_approx;
+  background-position: 7px -70px;
+  width: 50px;
+  height: 34px;
+}
+.header-main-menu {
+  border-top: 1px solid $seashell;
+}
+.main-menu-list {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: -1px;
+  font: 16px $font_2;
+  > li {
+    display: inline-block;
+    padding: 0 36px;
+    color: $color_heavy_metal_approx;
+    position: relative;
+    > a {
+      display: block;
+      padding: 10px 0;
+      border-top: 2px solid transparent;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: border .3s ease-in-out .3s;
+    }
+  }
+  li {
+    &.active a {
+      border-top-color: $color_akaroa_approx;
+    }
+    &:hover a {
+      border-top-color: $color_akaroa_approx;
+    }
+  }
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 999;
+  background: $white;
+  width: 100%;
+  left: 0;
+  display: none;
+  li {
+    display: block;
+    &:hover {
+      background-color: $color_akaroa_approx;
+    }
+  }
+  a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+  }
+}
+.home-top-banner {
+  background: $url_16 no-repeat center/cover transparent;
+  height: 34.1vw;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  .containerC {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+.home-banner-title {
+  background: $color_akaroa_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 10px;
+  width: 335px;
+  padding: 10px 22px 10px 52px;
+  text-align: center;
+  font: 600 22px $font_2;
+  margin-bottom: 13px;
+}
+.home-banner-img {
+  position: relative;
+}
+.home-banner-txt {
+  margin-left: -85px;
+  button {
+    margin: auto;
+    display: block;
+  }
+}
+.header-shop-now{
+  .shop-now-btn{
+    margin-top: 10px;
+  }
+}
+.sale-box-header{
+  background: url(../img/img/sale-bg-header.png) no-repeat center/contain transparent;
+  height: 18.9vw;
+  width: 18.9vw;
+  text-align: center;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.sale-box-txt-40 {
+  font-size:  2.53vw;
+  margin-top: -30px;
+}
+.sale-box-txt-20 {
+  font-size: 1.26vw;
+}
+.sale-box-txt-15 {
+  font-size: 0.94vw;
+}
+.features {
+  padding: 88px 0 70px;
+  text-align: center;
+}
+.features-title {
+  margin-top: 23px;
+  font: 18px $font_2;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid $color_akaroa_approx;
+  }
+}
+.features-box {
+  width: 128px;
+  display: inline-block;
+  vertical-align: top;
+  &:hover {
+    .features-28 {
+      background-position: -1px -263px;
+    }
+    .features-32 {
+      background-position: -198px -263px;
+    }
+    .features-31 {
+      background-position: -399px -263px;
+    }
+    .features-30 {
+      background-position: -604px -263px;
+    }
+    .features-29 {
+      background-position: -804px -263px;
+    }
+  }
+}
+.features-icon {
+  width: 110px;
+  height: 83px;
+  background: $url_15 no-repeat;
+  margin: auto;
+  display: block;
+  &:hover {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(1.2);
+  }
+}
+.features-28 {
+  background-position: -1px -380px;
+}
+.features-32 {
+  background-position: -198px -380px;
+}
+.features-31 {
+  background-position: -399px -380px;
+}
+.features-30 {
+  background-position: -604px -380px;
+}
+.features-29 {
+  background-position: -804px -380px;
+}
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+.bedsheet-set-box {
+  background: $url_17 no-repeat top left/50% $alabaster;
+  height: 543px;
+}
+.sale-box {
+  height: 190px;
+  width: 190px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  background: $url_18 no-repeat center/contain transparent;
+  text-transform: uppercase;
+  color: $color_tundora_approx;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px;
+  margin: 45px 45px 0 0;
+}
+.sale-box-txt {
+  font: 1.07vw $font_2;
+}
+.sale-box-price {
+  font: 1.45vw $font_2;
+}
+.sale-price-count {
+  text-align: right;
+}
+.list-desc {
+  display: inline-block;
+  width: calc(100% - 70px);
+  vertical-align: top;
+  padding-left: 20px;
+  font: 16px/28px $font_1;
+}
+.list-icon {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background: $url_15 no-repeat;
+}
+.bedsheet {
+  background-position: -625px -700px;
+}
+.calendar {
+  background-position: -13px -700px;
+}
+.home-icon {
+  background-position: -1121px -700px;
+}
+.features-desc-list {
+  margin-bottom: 30px;
+  li {
+    margin-top: 38px;
+  }
+}
+.half-box-txt {
+  padding: 60px;
+  p {
+    font: 16px/28px $font_1;
+  }
+}
+.features-bed-linen--row {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.features-bed-linen--box {
+  border: 1px solid transparent;
+  width: calc(100% / 4);
+  text-align: center;
+  color: $color_tundora_approx;
+  padding: 0 15px;
+  &:hover {
+    transform: scale(1.1, 1.1);
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 11px;
+    padding-top: 5px;
+    .features-bed-linen--btn {
+      background: $color_tangerine_approx;
+      border: 1px solid $color_tangerine_approx;
+      color: $white;
+    }
+  }
+}
+.bed-product-img {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 4px;
+}
+.features-bed-linen--desc {
+  padding: 20px;
+  .features-bed-linen--title:nth-child(2) {
+    margin-bottom: 24px;
+  }
+}
+.features-bed-linen--title {
+  font: 600 18px $font_2;
+  text-transform: uppercase;
+}
+.features-bed-linen--btn {
+  padding: 13px;
+  min-width: 129px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $color_shady_lady_approx;
+  color: $color_shady_lady_approx;
+  background: transparent;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  font: 500 14px $font_1;
+  margin-top: 24px;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: none;
+}
+.features-bed-linen {
+  padding: 90px 0 70px;
+  text-align: center;
+}
+.lounge-throw-blanket {
+  background: $url_19 no-repeat top right/50% $alabaster;
+  height: 544px;
+  .sale-price-count {
+    text-align: left;
+  }
+  .sale-box {
+    margin: 45px 0 0 45px;
+  }
+  .main-title {
+    margin-bottom: 40px;
+  }
+  .half-box-txt {
+    padding: 40px;
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+.design-standards {
+  text-align: center;
+  padding: 70px 0;
+  background: #fafafa;
+  margin-top: 50px;
+}
+.design-standards--icon {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 0 auto 34px;
+  background: $url_15 no-repeat;
+}
+.soft-silki {
+  background-position: 0 -540px;
+}
+.breathable {
+  background-position: -307px -540px;
+}
+.hotel-quality {
+  background-position: -620px -540px;
+}
+.eco-friendly {
+  background-position: -935px -540px;
+}
+.design-standards--box {
+  text-align: center;
+  padding: 0 30px;
+}
+.design-standards--title {
+  font: 18px $font_2;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.design-standards--row {
+  margin-top: 80px;
+}
+.slide-box {
+  padding: 90px 0 70px;
+  background: $alabaster;
+  .owl-dots {
+    display: none;
+  }
+  .owl-prev {
+    @extend %extend_2;
+    left: 0;
+  }
+  .owl-next {
+    @extend %extend_2;
+    right: 0;
+  }
+  .d-flex {
+    padding: 0 50px;
+  }
+  .owl-theme .owl-nav [class*=owl-] {
+    &:hover {
+      background: transparent;
+      color: $color_gravel_approx;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.product-date-info {
+  color: $color_akaroa_approx;
+  margin: 24px 0;
+  span {
+    display: inline-block;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      background: $url_15 no-repeat;
+    }
+  }
+  .date-icon:before {
+    background-position: -616px 0;
+  }
+  .share-icon:before {
+    background-position: -684px 0;
+  }
+}
+.date-icon {
+  margin-right: 30px;
+}
+.main-txt {
+  font: 16px/28px $font_1;
+  margin-bottom: 40px;
+}
+.slide-img {
+  margin-bottom: 57px;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -420px;
+  &:after {
+    content: "";
+    display: block;
+    min-height: 420px;
+  }
+}
+.site-footer {
+  min-height: 420px;
+  background: $color_tundora_approx;
+  padding: 35px 0 30px;
+  color: $color_shady_lady_approx;
+  font: 300 14px $font_1;
+}
+.top-footer {
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $color_shady_lady_approx;
+}
+.footer-lists {
+  display: inline-block;
+  vertical-align: text-top;
+  font: 300 14px/26px $font_1;
+  li {
+    margin-bottom: 13px;
+  }
+  .footer-lists--heading {
+    color: $color_akaroa_approx;
+    font: 20px $font_2;
+    margin-bottom: 13px;
+  }
+}
+.footer-subscribe-form {
+  max-width: 240px;
+}
+.subscribe-form {
+  position: relative;
+  color: $color_shady_lady_approx;
+  background: transparent;
+  border: 1px solid;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  input {
+    background: transparent;
+    border: 0 none;
+    padding: 10px 18px;
+    width: calc(100% - 30px);
+  }
+}
+.subscribe-btn {
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+  background: $url_15 no-repeat -733px 7px;
+  padding: 18px 10px;
+  cursor: pointer;
+}
+.social-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 36px;
+  height: 36px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  background: $url_15 no-repeat $color_akaroa_approx;
+  &.facebook {
+    background-position: 7px -137px;
+  }
+  &.twitter {
+    background-position: -78px -137px;
+  }
+  &.linkedIn {
+    background-position: -157px -137px;
+  }
+  &.youtube {
+    background-position: -249px -137px;
+  }
+  &.instagram {
+    //background: $url_20 no-repeat $color_akaroa_approx;
+    background-position: -336px -137px;;
+  }
+}
+.bottom-footer {
+  padding-top: 50px;
+  text-align: center;
+}
+.bottom-footer-list {
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    color: $color_akaroa_approx;
+  }
+}
+.card-box {
+  background: $white;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 10px;
+  display: inline-block;
+  padding: 8px 18px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.header-btns-block > * {
+  margin-left: 15px;
+  align-items: center;
+}
+.dropdownC:hover .dropdown-menu {
+  display: block;
+}
+
+.category-top-banner {
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .containerC {
+    flex-direction: column;
+  }
+}
+
+.category-throw-blanket {
+  background: $url_22 no-repeat center right/50% $alabaster;
+  height: 544px;
+  .sale-price-count {
+    text-align: left;
+  }
+  .sale-box {
+    margin: 45px 0 0 45px;
+  }
+  .main-title {
+    margin-bottom: 40px;
+  }
+  .half-box-txt {
+    padding: 40px;
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+.card-bed-linen--box {
+   border: 1px solid transparent;
+   text-align: center;
+   color: $color_tundora_approx;
+   padding: 0 15px;
+   &:hover {
+     transform: scale(1.1, 1.1);
+     border: 1px solid $color_celeste_approx;
+     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+     border-radius: 11px;
+     padding-top: 5px;
+     .features-bed-linen--btn {
+       background: $color_tangerine_approx;
+       border: 1px solid $color_tangerine_approx;
+       color: $white;
+     }
+   }
+ }
+
+.arrow-section {
+  position: relative;
+  .arrow-block {
+    display: inline-block;
+    .circle {
+      border: 6px solid $white;
+      border-radius: 50%;
+      margin: auto;
+      width: 22px;
+      .circle-sm {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: $color_akaroa_approx;
+      }
+    }
+    .arrow-box {
+      position: relative;
+      background: white;
+      margin-top: 14px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font: 14px $font_1;
+      color: $color_silver_chalice_approx;
+    }
+    .arrow-box-bottom {
+      transform: rotate(180deg);
+      margin-bottom: 14px;
+      .arrow-text {
+        transform: rotate(-180deg);
+        display: block;
+      }
+    }
+    .arrow-box:after, .arrow-box:before {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    .arrow-box:before {
+      border-bottom-color: white;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+
+  }
+  .arrow-1 {
+    position: absolute;
+    top: -265px;
+    right: 118px;
+  }
+  .arrow-3 {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+  }
+
+}
+.cat-wrapper-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  .cat-wrapper {
+    max-width: 685px;
+    margin: 0 auto;
+    text-align: center;
+    color: $white;
+    .category_heading {
+      font: 28px $font_2;
+      text-transform: uppercase;
+      line-height: 34px;
+
+    }
+    .cat_price {
+      font: 20px $font_2;
+      text-transform: uppercase;
+      line-height: 34px;
+    }
+    .cat_desc {
+      font: 16px $font_1;
+      line-height: 26px;
+    }
+  }
+  .cat-wrapper-btn {
+    display: block;
+    margin: 23px auto;
+    .shop-now-btn {
+      background-color: $color_tundora_approx;
+      border: 1px solid $color_tundora_approx;
+      &:hover {
+      color: $white;
+      background-color: $color_dove_gray_approx;
+      }
+    }
+  }
+}
+.breadcrumbs-wrapper{
+  background: $seashell;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.breadcrumbs{
+  text-align:left;
+  font:14px $font_1 ;
+  text-transform: uppercase;
+}
+
+.breadcrumb{
+  a{
+    color:$text_color_dark;
+  }
+  &::before {
+    content: ">";
+    font-size: 20px;
+  }
+}
+.page-heading{
+  text-align: left;
+  font: 600 28px $font_0;
+  text-transform: uppercase;
+  margin:10px 0;
+}
+
+.filtering-section{
+  display: none;
+  margin-bottom: 50px;
+  align-items: flex-end;
+    #faceted-search-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+}
+.actionBar{
+  margin: 0;
+}
+.actionBar-section .form-field{
+  margin: 0;
+}
+.filter-btn{
+  color: #ffffff;
+  background-color: #717171;
+  border: 1px solid #464646;
+  min-width: 107px;
+  border-radius: 5px;
+  padding: 8px 14px;
+  transition: none;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 37px;
+}
+
+.title-filter{
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+.hide {
+  display:none;
+}
+.sidebarBlock + .sidebarBlock {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+.product {
+  overflow: visible;
+}
+.price-title {
+  text-transform: uppercase;
+  color: $color_akaroa_approx;
+  font: 20px $font_2;
+  margin-right: 10px;
+}
+.price {
+  text-transform: uppercase;
+  color: $color_tundora_approx;
+  font: 600 20px $font_2;
+}
+.productView-title{
+  font: 600 28px $font_2;
+  color: $color_tundora_approx;
+  margin-bottom: 24px;
+}
+.yotpo{
+  margin-left: 60px;
+}
+.productView-info-name{
+  display: inline-block;
+}
+.productView-info-value{
+  display: inline-block;
+}
+.productView-img-container:after{
+  padding-bottom: 110.8%;
+}
+.slick-prev, .slick-next{
+  top: 70%;
+}
+.productView-thumbnails{
+  img{
+    max-height: 100px;
+    max-width: 108px;
+  }
+  .productView-thumbnail-link{
+    height: 102px;
+    max-width: 150px;
+  }
+}
+.productView-info > :first-child {
+  margin-top: 0;
+}
+.read-more-btn{
+  font:600 16px $font_0;
+  text-decoration: underline;
+}
+.form-label{
+  text-transform: uppercase;
+  color: $color_akaroa_approx;
+  font: 16px $font_2;
+}
+.form-option{
+  background-color : #f7f7f7;
+  color: #bdbdbd;
+  height : 36px;
+  min-width : 77px;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  font: 14px $font_1;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+}
+.form-radio:checked + .form-option{
+   border-color: #ccc;
+  box-shadow: 0 0 0 1px #333333;
+  background-color: #f1f1f1;
+  color: $color_tundora_approx;
+  -moz-box-shadow: inset 0 0 10px #d7d7d7;
+  -webkit-box-shadow: inset 0 0 10px #d7d7d7;
+  box-shadow: inset 0 0 10px #d7d7d7;
+  font-weight: 500;
+}
+.form-option-variant--color, .form-option-variant--pattern{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+.form-field.form-field--increments{
+  float: left;
+  margin-right: 50px;
+}
+.productView-product{
+  padding-bottom: 1rem;
+}
+.productView-details {
+  margin-bottom: 1rem;
+}
+.productView-options{
+  margin-bottom: 0;
+}
+h2.pr-tab-title {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: $font_2;
+}
+.sizing{
+  width:100%;
+  th {
+    color: $color_akaroa_approx;
+    font-size: 16px;
+    font-family: $font_0;
+    text-align: left;
+  }
+  tr {
+    line-height: 1.7;
+  }
+  td {
+    word-spacing: 1px;
+  }
+}
+.switchSizes{
+  margin-bottom: 20px;
+}
+.cmClick{
+  margin-left: 10px;
+}
+.tab-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: $url_15 no-repeat;
+  vertical-align: sub;
+  margin-right: 8px;
+}
+.size-guide-icon{
+  background-position: -520px -74px;
+}
+.specification-icon{
+  background-position: -587px -74px;
+}
+.titleLine{
+  border-bottom: 2px solid $color_akaroa_approx;
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  padding-right: 15px;
+}
+.specInclude{
+  margin-bottom: 30px;
+}
+.specTick {
+  margin-bottom: 10px;
+  font-family: $font_1;
+    span{
+      width: 25px;
+      height: 25px;
+      background: $url_15 no-repeat -651px -76px;
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-right: 10px;
+    }
+}
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: 0;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+}
+
+input[type='radio']:checked:after {
+  background-color: #fff;
+  border: 4px solid $color_akaroa_approx;
+}
+
+
+
+.faq-title {
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+.accordion-block ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.accordion-block ul li {
+  margin-bottom: 20px;
+  font: 300 18px Roboto, sans-serif;
+
+}
+.accordion-block ul li .faq-title {
+  height: auto;
+  border: 1px solid #e0e0e0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.accordion-block ul li .faq-title span {
+  font: 20px Roboto, sans-serif;
+  color: #464646;
+}
+.plus-minus:after {
+  content: "+";
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  font-size: 28px;
+  text-align: left;
+  width: 35px;
+  top: 11px;
+}
+.accordion-block ul li .faq-content {
+  display: none;
+  padding: 15px;
+
+}
+
+
+.open{
+  .plus-minus:after {
+    content: "_";
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    font-size: 28px;
+    text-align: left;
+    width: 35px;
+    top: -3px;
+  }
+}
+
+.accordion-segment {
+  max-width: 576px;
+  -webkit-box-flex: 50%;
+  -webkit-flex: 50%;
+  -moz-box-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+}
+
+.marg-right {
+  margin-right: 25px;
+}
+
+.accordion-subtitle {
+  padding: 16px;
+  width: 100%;
+}
+
+.number-box {
+  border-right: 1px solid #e0e0e0;
+  padding: 17px 18px;
+  background-color: #f1f1f1;
+}
+
+element.style {
+  background: #fff;
+  border-top: 1px solid #edeeef;
+  padding: 50px 0;
+}
+
+.dimention-info {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.navPages-container.is-open{
+  .main-menu-list > li{
+    display: block;
+    text-align: left;
+  }
+  .dropdown-menu {
+    position: relative;
+    background: none;
+    a{
+      text-align: left;
+    }
+
+  }
+}
+.banner-text-trans {
+  max-width: 500px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
