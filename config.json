@@ -1,6 +1,6 @@
 {
   "name": "SleepWoovenCornerstone (7)",
-  "version": "1.13.2",
+  "version": "1.13.3",
   "meta": {
     "price": 0,
     "documentation_url": "https://support.bigcommerce.com/articles/Public/Cornerstone-Theme-Manual",
@@ -331,8 +331,7 @@
           "home_garden"
         ]
       },
-      "images": {
-      },
+      "images": {},
       "settings": {
         "homepage_new_products_count": 12,
         "homepage_featured_products_count": 8,
