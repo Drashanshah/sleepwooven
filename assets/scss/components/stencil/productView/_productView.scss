@@ -76,8 +76,6 @@
 
     img {
         @include lazy-loaded-img;
-        max-height: 50px;
-        max-width: 50px;
         width: auto;
     }
 }
@@ -105,7 +103,8 @@
 
     &:hover,
     &.is-active {
-        border-color: color("greys", "darker");
+        // border-color: color("greys", "darker");
+        border-color: darkgray;
     }
 }
 

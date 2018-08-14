@@ -542,6 +542,8 @@ ul, ol, dl {
 .bed-product-img {
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 4px;
+  height: 150px;
+  object-fit: cover;
 }
 .features-bed-linen--desc {
   padding: 20px;
@@ -983,9 +985,10 @@ ul, ol, dl {
 }
 .page-heading{
   text-align: left;
-  font: 600 28px $font_0;
+  font: 600 28px $font_2;
   text-transform: uppercase;
-  margin:10px 0;
+  margin:10px 0px;
+  padding-left: 40px;
 }
 
 .filtering-section{
@@ -1066,8 +1069,9 @@ ul, ol, dl {
 }
 .productView-thumbnails{
   img{
-    max-height: 100px;
-    max-width: 108px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
   }
   .productView-thumbnail-link{
     height: 102px;
@@ -1080,6 +1084,7 @@ ul, ol, dl {
 .read-more-btn{
   font:600 16px $font_0;
   text-decoration: underline;
+  padding-left: 5px;
 }
 .form-label{
   text-transform: uppercase;
@@ -1194,12 +1199,15 @@ h2.pr-tab-title {
     }
 }
 
+
+
+
 input[type='radio']:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: 0;
-  left: -1px;
+  width: 17px;
+  height: 17px;
+  border-radius: 17px;
+  top: 0px;
+  left: -2px;
   position: relative;
   background-color: #d1d3d1;
   content: '';

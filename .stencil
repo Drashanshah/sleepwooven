@@ -1,0 +1,12 @@
+{
+  "normalStoreUrl": "https://www.sleepwooven.com",
+  "port": 3000,
+  "clientId": "tqma6tpumcami05xwjjpobqkyc0lst3",
+  "accessToken": "tjpk99v68tt4kkwyna6dp0fxu3r051w",
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  }
+}
