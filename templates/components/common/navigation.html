@@ -9,13 +9,13 @@
         </div>
         <div>
             <div class="site-slogan">
-                <span class="slogan-icon icons"></span>
+                <span class="slogan-icon fas fa-shipping-fast"></span>
                 <h4 class="slogan-title">Free Shipping. 100 Night Trial</h4>
             </div>
         </div>
         <div class="header-btns-block d-flex">
             <div class="search-box">
-                <button class="btns search-btn icons"></button>
+                <button class="btns search-btn fas fa-search"></button>
             </div>
             <div id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
                 {{> components/common/quick-search}}
@@ -24,7 +24,7 @@
             {{#if settings.gift_certificates_enabled}}
             <div class="gift-box">
                 <a href="{{urls.gift_certificate.purchase}}">
-                    <button class="btns-icon gift-btn icons"></button>
+                    <button class="btns-icon gift-btn fas fa-gift"></button>
                 </a>
             </div>
             {{/if}}
@@ -32,7 +32,7 @@
                 {{#if customer}}
                 <button class="grey-btn signin-btn user_account">
                     <a href="{{urls.account.index}}">{{lang 'common.account'}}</a> <span
-                        class="icons user-icon"></span>
+                        class="user-icon far fa-user"></span>
                 </button>
                 <button class="grey-btn signin-btn">
                     <a href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a> <span
@@ -40,7 +40,7 @@
                 </button>
                 {{else}}
                 <button class="grey-btn signin-btn">
-                    <a href="{{urls.auth.login}}">{{lang 'common.login'}}</a><span class="icons user-icon"></span>
+                    <a href="{{urls.auth.login}}">{{lang 'common.login'}}</a><span class="user-icon far fa-user"></span>
                 </button>
                 {{/if}}
             </div>
@@ -51,7 +51,7 @@
                         data-dropdown="cart-preview-dropdown"
                         data-options="align:right"
                         href="{{urls.cart}}">
-                    <span class="navUser-item-cartLabel"><button class="btns-icon basket-btn icons"></button></span>
+                    <span class="navUser-item-cartLabel"><button class="btns-icon basket-btn fas fa-shopping-cart"></button></span>
                     <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
                 </a>
 

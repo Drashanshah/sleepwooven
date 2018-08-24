@@ -44,6 +44,22 @@ $url_20: url(../img/img/instalogo.png);
 $url_21: url(../img/img/bed-product-01.jpg);
 $url_22: url(../img/img/cat-bedsheet-set-cover.jpg);
 
+$url_icon_bedding_lg: url(../img/img/icons-bedding-lg.png);
+$url_icon_bedding_set_lg: url(../img/img/icons-bedding-set-lg.png);
+$url_icon_blanket_lg: url(../img/img/icons-blanket-lg.png);
+$url_icon_duvet_lg: url(../img/img/icons-duvet-lg.png);
+$url_icon_pillowcase_lg: url(../img/img/icons-pillowcase-lg.png);
+
+$url_icon_feather_lg: url(../img/img/icons-feather-lg.png);
+$url_icon_hotel_lg: url(../img/img/icons-hotel-lg.png);
+$url_icon_breatheable_lg: url(../img/img/icons-breatheable-lg.png);
+$url_icon_leaves_lg: url(../img/img/icons-leaves-lg.png);
+
+
+$url_icon_hotel: url(../img/img/icons-hotel.png);
+$url_icon_feather: url(../img/img/icons-feather.png);
+$url_icon_knit: url(../img/img/icons-knit.png);
+
 //@extend-elements
 //original selectors
 //.grey-btn, .grey-btn:hover
@@ -211,9 +227,13 @@ ul, ol, dl {
 .slogan-icon {
   width: 30px;
   height: 25px;
-  background-position: 0 0;
+  font-size: large;
+  color: $color_akaroa_approx;
   vertical-align: middle;
   margin-right: 10px;
+  text-align: center;
+  vertical-align: initial;
+  padding-top: 5px;
 }
 .slogan-title {
   font: 500 15px $font_0;
@@ -230,8 +250,8 @@ ul, ol, dl {
 .search-btn {
   width: 34px;
   height: 34px;
-  background-color: $color_alabaster_approx;
-  background-position: 8px -177px;
+  color: $color_akaroa_approx;
+  font-size: x-large;
   border: 0 none;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 3px;
@@ -242,7 +262,8 @@ ul, ol, dl {
 .gift-btn {
   width: 34px;
   height: 34px;
-  background-position: -101px 2px;
+  color: $color_akaroa_approx;
+  font-size: x-large;
 }
 .signin-box{
   display: flex;
@@ -262,13 +283,19 @@ ul, ol, dl {
 .user-icon {
   width: 15px;
   height: 15px;
-  background-position: -42px -185px;
+  color: $color_alabaster_approx;
+
   margin-left: 30px;
 }
 .basket-btn {
   width: 34px;
   height: 34px;
-  background-position: -205px 0;
+  color: $color_akaroa_approx;
+  font-size: x-large;
+  position: relative;
+  z-index: -1;
+  left: 20px;
+
 }
 .lang-btn {
   background-color: $color_alabaster_approx;
@@ -404,27 +431,13 @@ ul, ol, dl {
   display: inline-block;
   vertical-align: top;
   &:hover {
-    .features-28 {
-      background-position: -1px -263px;
-    }
-    .features-32 {
-      background-position: -198px -263px;
-    }
-    .features-31 {
-      background-position: -399px -263px;
-    }
-    .features-30 {
-      background-position: -604px -263px;
-    }
-    .features-29 {
-      background-position: -804px -263px;
-    }
+    filter: brightness(10%);
   }
 }
 .features-icon {
   width: 110px;
   height: 83px;
-  background: $url_15 no-repeat;
+  // background: $url_15 no-repeat;
   margin: auto;
   display: block;
   &:hover {
@@ -433,19 +446,19 @@ ul, ol, dl {
   }
 }
 .features-28 {
-  background-position: -1px -380px;
+  background: $url_icon_bedding_lg no-repeat center
 }
 .features-32 {
-  background-position: -198px -380px;
+  background: $url_icon_blanket_lg no-repeat center
 }
 .features-31 {
-  background-position: -399px -380px;
+  background: $url_icon_bedding_set_lg no-repeat center
 }
 .features-30 {
-  background-position: -604px -380px;
+  background: $url_icon_duvet_lg no-repeat center
 }
 .features-29 {
-  background-position: -804px -380px;
+  background: $url_icon_pillowcase_lg no-repeat center
 }
 .features-row {
   display: flex;
@@ -494,15 +507,20 @@ ul, ol, dl {
   display: inline-block;
   background: $url_15 no-repeat;
 }
-.bedsheet {
-  background-position: -625px -700px;
+
+.hotel {
+  background: $url_icon_hotel no-repeat center;
 }
-.calendar {
-  background-position: -13px -700px;
+
+.feather {
+  background: $url_icon_feather no-repeat center;
 }
-.home-icon {
-  background-position: -1121px -700px;
+
+.knit {
+  background: $url_icon_knit no-repeat center;
 }
+
+
 .features-desc-list {
   margin-bottom: 30px;
   li {
@@ -607,16 +625,16 @@ ul, ol, dl {
   background: $url_15 no-repeat;
 }
 .soft-silki {
-  background-position: 0 -540px;
+  background: $url_icon_feather_lg no-repeat center;
 }
 .breathable {
-  background-position: -307px -540px;
+  background: $url_icon_breatheable_lg no-repeat center;
 }
 .hotel-quality {
-  background-position: -620px -540px;
+  background: $url_icon_hotel_lg no-repeat center;
 }
 .eco-friendly {
-  background-position: -935px -540px;
+  background: $url_icon_leaves_lg no-repeat center;
 }
 .design-standards--box {
   text-align: center;
@@ -667,17 +685,22 @@ ul, ol, dl {
       content: "";
       display: inline-block;
       vertical-align: middle;
-      margin-right: 8px;
-      width: 24px;
-      height: 24px;
-      background: $url_15 no-repeat;
     }
   }
-  .date-icon:before {
-    background-position: -616px 0;
+
+  .date-icon {
+    i {
+      font-size: x-large;
+      vertical-align: text-bottom;
+      margin-right: 10px;
+    }
   }
-  .share-icon:before {
-    background-position: -684px 0;
+  .share-icon {
+    i {
+      font-size: x-large;
+      vertical-align: text-bottom;
+      margin-right: 10px;
+    }
   }
 }
 .date-icon {
@@ -749,9 +772,9 @@ ul, ol, dl {
   flex: 0 0 25px;
   width: 25px;
   height: 25px;
-  background: $url_15 no-repeat -733px 7px;
-  padding: 18px 10px;
   cursor: pointer;
+  color: $color_akaroa_approx;
+  font-size: large;
 }
 .social-icon {
   display: inline-block;
@@ -761,23 +784,13 @@ ul, ol, dl {
   height: 36px;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 50%;
-  background: $url_15 no-repeat $color_akaroa_approx;
-  &.facebook {
-    background-position: 7px -137px;
-  }
-  &.twitter {
-    background-position: -78px -137px;
-  }
-  &.linkedIn {
-    background-position: -157px -137px;
-  }
-  &.youtube {
-    background-position: -249px -137px;
-  }
-  &.instagram {
-    //background: $url_20 no-repeat $color_akaroa_approx;
-    background-position: -336px -137px;;
-  }
+  background-color: $color_akaroa_approx;
+
+  color: white;
+  font-size:  20px !important;
+  text-align: center;
+  padding-top: 8px;
+
 }
 .bottom-footer {
   padding-top: 50px;
@@ -1166,15 +1179,20 @@ h2.pr-tab-title {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: $url_15 no-repeat;
+  // background: $url_15 no-repeat;
   vertical-align: sub;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 .size-guide-icon{
-  background-position: -520px -74px;
+  color: $color_akaroa_approx;
+  font-size: xx-large;
+  // background-position: -520px -74px;
 }
 .specification-icon{
-  background-position: -587px -74px;
+  color: $color_akaroa_approx;
+  margin-right: 15px;
+  font-size: xx-large;
+  // background-position: -587px -74px;
 }
 .titleLine{
   border-bottom: 2px solid $color_akaroa_approx;
