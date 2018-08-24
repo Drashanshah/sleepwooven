@@ -404,6 +404,7 @@ $font_0: Oswald-Regular;
   body {
     padding-top: 0px;
     overflow-x: hidden;
+    margin-top: spacing("single") * 5; // 1
   }
   .home-top-banner{
     background-size: contain;
