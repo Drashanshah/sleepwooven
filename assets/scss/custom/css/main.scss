@@ -60,6 +60,8 @@ $url_icon_hotel: url(../img/img/icons-hotel.png);
 $url_icon_feather: url(../img/img/icons-feather.png);
 $url_icon_knit: url(../img/img/icons-knit.png);
 
+$url_bk_geometric: url(../img/img/weave_geometric_bk_sm.jpg);
+
 //@extend-elements
 //original selectors
 //.grey-btn, .grey-btn:hover
@@ -114,8 +116,11 @@ h1, h2, h3, h4, h5, h6{
   margin-bottom:0;
   letter-spacing: 0;
 }
+
+
 p {
-  margin-bottom: 0;
+  // Alan: applies to too many sections, do not use
+  // margin-bottom: 0;
 }
 ul {
   margin-left: 0;
@@ -152,8 +157,8 @@ ul, ol, dl {
 }
 .main-row {
   display: flex;
-  margin-left: -15px;
-  margin-right: -15px;
+  // margin-left: -15px;
+  // margin-right: -15px;
 }
 .half-box {
   max-width: 50%;
@@ -403,6 +408,13 @@ ul, ol, dl {
   justify-content: center;
   margin-bottom: 15px;
 }
+
+.sale-box {
+  p {
+    margin-bottom: 0px;
+  }
+}
+
 .sale-box-txt-40 {
   font-size:  2.53vw;
   margin-top: -30px;
@@ -614,8 +626,11 @@ ul, ol, dl {
 .design-standards {
   text-align: center;
   padding: 70px 0;
-  background: #fafafa;
+  // background: #fafafa;
+  background: $url_bk_geometric repeat;
   margin-top: 50px;
+  margin-bottom: 50px;
+  border: 15px solid rgb(70,70,70);
 }
 .design-standards--icon {
   width: 120px;
@@ -1001,7 +1016,12 @@ ul, ol, dl {
   font: 600 28px $font_2;
   text-transform: uppercase;
   margin:10px 0px;
-  padding-left: 40px;
+
+  &.blog-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
 }
 
 .filtering-section{
@@ -1204,18 +1224,21 @@ h2.pr-tab-title {
 .specInclude{
   margin-bottom: 30px;
 }
-.specTick {
+.specText {
   margin-bottom: 10px;
   font-family: $font_1;
-    span{
+    .specTick{
       width: 25px;
       height: 25px;
-      background: $url_15 no-repeat -651px -76px;
+      color: $color_akaroa_approx;
+      vertical-align: baseline;
+      // background: $url_15 no-repeat -651px -76px;
       display: inline-block;
-      vertical-align: text-bottom;
       margin-right: 10px;
     }
 }
+
+
 
 
 
@@ -1366,4 +1389,30 @@ element.style {
   padding: 20px;
   font-size: 18px;
   margin-bottom: 30px;
+}
+
+.customVideo {
+  background: $alabaster;
+  .customVideo-half-box {
+    align-self: center; 
+  }
+
+  .customVideo-wrapper {
+    margin-top: 20px;
+  }
+
+  .photoGallery {
+    display: flex;
+
+    .thumbnail {
+      width: 100px;
+      margin-right: 20px;
+    }
+  }
+
+}
+
+
+.productView-thumbnails .productView-thumbnail-link { 
+  border: none !important;
 }

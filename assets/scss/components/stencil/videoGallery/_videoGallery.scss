@@ -2,6 +2,12 @@
 // VIDEO GALLERY
 // =============================================================================
 
+.customVideo-main {
+    @include flex-video-container();
+    margin-bottom: $videoGallery-spacing;
+}
+
+
 .videoGallery-main {
     @include flex-video-container();
     margin-bottom: $videoGallery-spacing;

@@ -11,7 +11,7 @@ blog:
 
 <main class="page">
     <div class="container">
-        <h1 class="page-heading">{{ blog.name }}</h1>
+        <h1 class="page-heading blog-heading">{{ blog.name }}</h1>
         {{#each blog.posts}}
         {{> components/blog/post post=this settings=../settings}}
         {{/each}}

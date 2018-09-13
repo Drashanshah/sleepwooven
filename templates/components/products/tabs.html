@@ -22,14 +22,17 @@
         <label class="form-label">Order Includes</label>
         <div class="specContent">
             {{#if product.custom_fields}}
+            <ul class="fa-ul">
                 {{#each product.custom_fields}}
                     {{#if this.name '==' 'includes'}}
                         <p class="specInclude">{{{this.value}}}</p>
                     {{/if}}
                     {{#if this.name '==' 'feature'}}
-                        <p class="specTick"><span></span>{{{this.value}}}</p>
+
+                        <li class="specText"><i class="specTick fa-li fas fa-check"></i>{{{this.value}}}</li>
                     {{/if}}
                 {{/each}}
+            </ul>
             {{/if}}
         </div>
     </div>
