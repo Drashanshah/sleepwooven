@@ -27,10 +27,13 @@
                 {{else}}
                     {{> components/common/login-for-pricing}}
                 {{/or}}
-                <div class="yotpo bottomLine"
-                     data-product-id="{{ product.id }}">
-                </div>
+                
             </div>
+
+            <div class="yotpo bottomLine"
+                     data-product-id="{{ product.id }}">
+            </div>
+
             {{{region name="product_below_price"}}}
             <div class="productView-rating" {{#if schema}} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{{/if}} >
                 {{#if settings.show_product_rating}}

@@ -64,7 +64,7 @@
 .navUser-action {
     color: stencilColor("navUser-color");
     font-weight: fontWeight("bold");
-    padding: spacing("base") spacing("half");
+    // padding: spacing("base") spacing("half");
     text-decoration: none;
     text-transform: uppercase;
 
@@ -169,7 +169,7 @@
 }
 
 .navUser-item-cartLabel {
-    display: none;
+    // display: none;
 
     @include breakpoint("small") {
         display: inline;

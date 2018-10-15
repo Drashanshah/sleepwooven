@@ -28,23 +28,27 @@
             </a>
         {{/if}}
         <div class="features-bed-linen--desc">
-            <h3 class="features-bed-linen--title">
-                {{#if demo}}
-                    {{name}}
-                {{else}}
-                <a href="{{url}}">{{name}}</a>
-                {{/if}}
-            </h3>
-
-            <div class="card-text" data-test-info-type="price">
+      
                 <h3 class="features-bed-linen--title">
-                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                        {{> components/products/price price=price}}
+                    {{#if demo}}
+                        {{name}}
                     {{else}}
-                        {{> components/common/login-for-pricing}}
-                    {{/or}}
+                    <a href="{{url}}">{{name}}</a>
+                    {{/if}}
                 </h3>
-            </div>
+   
+
+
+                <div class="card-text" data-test-info-type="price">
+                    <h3 class="features-bed-linen--title">
+                        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                            {{> components/products/price price=price}}
+                        {{else}}
+                            {{> components/common/login-for-pricing}}
+                        {{/or}}
+                    </h3>
+                </div>
+
             {{> components/products/bulk-discount-rates}}
             {{#if custom_fields}}
                 {{#each custom_fields}}

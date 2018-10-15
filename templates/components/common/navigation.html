@@ -7,16 +7,16 @@
         <div class="site-brand">
             {{> components/common/store-logo}}
         </div>
-        <div>
+   
             <div class="site-slogan">
                 <span class="slogan-icon fas fa-shipping-fast"></span>
                 <h4 class="slogan-title">Free Shipping. 100 Night Trial</h4>
             </div>
-        </div>
+
         <div class="header-btns-block d-flex">
-            <div class="search-box">
+            <!-- <div class="search-box">
                 <button class="btns search-btn fas fa-search"></button>
-            </div>
+            </div> -->
             <div id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
                 {{> components/common/quick-search}}
             </div>
@@ -44,20 +44,7 @@
                 </button>
                 {{/if}}
             </div>
-            <div class="basket-box">
-                <a
-                        class="navUser-action"
-                        data-cart-preview
-                        data-dropdown="cart-preview-dropdown"
-                        data-options="align:right"
-                        href="{{urls.cart}}">
-                    <span class="navUser-item-cartLabel"><button class="btns-icon basket-btn fas fa-shopping-cart"></button></span>
-                    <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
-                </a>
 
-                <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content
-                     aria-hidden="true"></div>
-            </div>
             <!--<div class="lang-box">
                 <button class="btns-icon lang-btn icons"></button>
             </div>-->
@@ -74,5 +61,26 @@
                 </div>
             {{/if}}
         </div>
+
+
+
+        <div class="basket-box">
+            <!-- weglot misspace -->
+            <!-- <div class="weglot_here"></div> -->
+            <a
+                    class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                <span class="navUser-item-cartLabel"><button class="btns-icon basket-btn fas fa-shopping-cart"></button></span>
+                <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+            </a>
+
+            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content
+                 aria-hidden="true"></div>
+        </div>
+
     </div>
+
 </div>

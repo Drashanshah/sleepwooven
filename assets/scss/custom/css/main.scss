@@ -96,7 +96,7 @@ html {
 }
 body {
   height: 100%;
-  font: 16px $font_0;
+  font: 16px $font_1;
   color: $color_tundora_approx;
 }
 li {
@@ -148,12 +148,25 @@ ul, ol, dl {
   width: auto;
   height: auto;
 }
+
+.weglot_here {
+  margin-left: 10px;
+}
+
+.site-brand {
+  margin-left: 60px;
+}
+
 .containerC {
   width: 1170px;
   margin: auto;
 }
 .d-flex {
   display: flex;
+
+  &.productView-price {
+    flex-wrap: wrap;
+  }
 }
 .main-row {
   display: flex;
@@ -228,6 +241,7 @@ ul, ol, dl {
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 5px;
   color: $color_dove_gray_approx;
+  margin-left: auto;
 }
 .slogan-icon {
   width: 30px;
@@ -244,12 +258,49 @@ ul, ol, dl {
   font: 500 15px $font_0;
   vertical-align: middle;
   display: inline-block;
+  
 }
 .header-top {
+
   padding: 20px 0;
   .d-flex {
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: space-around;
+    margin-left: auto;
+  }
+
+  .basket-box {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      position: relative;
+      top: unset;
+      right: unset;
+
+    .countPill {
+      position: relative;
+      right: 20px;
+
+    }
+    
+
+    @media screen and(max-width: 482px) {
+
+
+      position: absolute;
+      // top: 15px;
+      right: 5px;
+      padding-right: 0px;
+
+    }
+
+    .dropdown-menu.is-open {
+      left: -240px !important;
+      top: 34px;
+      min-width: 305px;
+      border: 2px solid $color_tundora_approx;
+    }
   }
 }
 .search-btn {
@@ -285,13 +336,18 @@ ul, ol, dl {
 .user_account{
   margin-right: 5px;
 }
-.user-icon {
-  width: 15px;
-  height: 15px;
-  color: $color_alabaster_approx;
 
-  margin-left: 30px;
+.signin-box {
+  .user-icon {
+    width: 15px;
+    height: 15px;
+    color: $color_alabaster_approx;
+
+    margin-left: 5px;
+  }
+
 }
+
 .basket-btn {
   width: 34px;
   height: 34px;
@@ -299,7 +355,6 @@ ul, ol, dl {
   font-size: x-large;
   position: relative;
   z-index: -1;
-  left: 20px;
 
 }
 .lang-btn {
@@ -311,6 +366,11 @@ ul, ol, dl {
 .header-main-menu {
   border-top: 1px solid $seashell;
 }
+
+.navPages-list--user {
+  font: 16px $font_2;
+}
+
 .main-menu-list {
   text-align: center;
   text-transform: uppercase;
@@ -478,8 +538,36 @@ ul, ol, dl {
   margin-top: 64px;
 }
 .bedsheet-set-box {
-  background: $url_17 no-repeat top left/50% $alabaster;
+  // background: $url_17 no-repeat top left/50% $alabaster;
+  background: $alabaster;
   height: 543px;
+
+  .img-background {
+    background: $url_17 no-repeat top;
+    height: 300px;
+    background-size: cover;
+    background-position: right;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 10px;
+
+  }
+
+  .left.desktop {
+    background: $url_17 no-repeat top;
+    // min-height: 543px;
+    background-size: cover;
+
+    .sale-box {
+      float: left;
+    }
+
+
+  }
+
+  .right {
+    padding: 50px;
+  }
 }
 .sale-box {
   height: 190px;
@@ -555,13 +643,25 @@ ul, ol, dl {
   width: calc(100% / 4);
   text-align: center;
   color: $color_tundora_approx;
-  padding: 0 15px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .features-bed-linen--title {
+    // min-height: 55px;
+
+  }
+
+
+
   &:hover {
-    transform: scale(1.1, 1.1);
+    // transform: scale(1.05, 1.05);
     border: 1px solid $color_celeste_approx;
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 11px;
-    padding-top: 5px;
+    // padding-top: 5px;
     .features-bed-linen--btn {
       background: $color_tangerine_approx;
       border: 1px solid $color_tangerine_approx;
@@ -573,10 +673,41 @@ ul, ol, dl {
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 4px;
   height: 150px;
+  width: 225px;
   object-fit: cover;
 }
 .features-bed-linen--desc {
+
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .child {
+    flex-grow: 1;
+
+    &.title {
+      min-height: 55px;
+    }
+
+    &.card-text {
+      min-height: 25px;
+      margin-bottom: 15px;
+    }
+
+    &.custom-field {
+      flex-grow: 2;
+      min-height: 100px;
+    }
+
+
+    &.btn-link {
+      
+    }
+  }
+
+
+
   .features-bed-linen--title:nth-child(2) {
     margin-bottom: 24px;
   }
@@ -605,8 +736,44 @@ ul, ol, dl {
   text-align: center;
 }
 .lounge-throw-blanket {
-  background: $url_19 no-repeat top right/50% $alabaster;
+  // background: $url_19 no-repeat top right/50% $alabaster;
+  background: $alabaster;
   height: 544px;
+
+  .left {
+    padding: 50px;
+  }
+
+  // .right {
+  //   background: $url_19;
+  //   // background-size: cover;
+  // }
+
+
+  .img-background {
+    background: $url_19 no-repeat top;
+    height: 300px;
+    background-size: cover;
+    background-position: right;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 10px;
+
+  }
+
+  .right.desktop {
+    background: $url_19 no-repeat top;
+    // min-height: 543px;
+    background-size: cover;
+
+    .sale-box {
+      float: right;
+    }
+
+
+  }
+
+
   .sale-price-count {
     text-align: left;
   }
@@ -849,8 +1016,28 @@ ul, ol, dl {
 }
 
 .category-throw-blanket {
-  background: $url_22 no-repeat center right/50% $alabaster;
+
+  background: $alabaster;
   height: 544px;
+
+  .mobile {
+    background: $url_22 no-repeat top;
+    height: 300px;
+    background-size: cover;
+    background-position: right;
+    margin-bottom: 10px;
+
+  }
+
+  .right.desktop {
+    background: $url_22 no-repeat top;
+    // min-height: 543px;
+    background-size: cover;
+    min-height: 300px;
+
+  }
+
+
   .sale-price-count {
     text-align: left;
   }
@@ -866,6 +1053,8 @@ ul, ol, dl {
       margin-bottom: 40px;
     }
   }
+
+
 }
 .card-bed-linen--box {
    border: 1px solid transparent;
@@ -938,8 +1127,8 @@ ul, ol, dl {
   }
   .arrow-1 {
     position: absolute;
-    top: -265px;
-    right: 118px;
+    top: -50px;
+    right: 150px;
   }
   .arrow-3 {
     position: absolute;
@@ -957,6 +1146,7 @@ ul, ol, dl {
   -ms-flex-direction: column;
   flex-direction: column;
   .cat-wrapper {
+    padding: 0px 15px; 
     max-width: 685px;
     margin: 0 auto;
     text-align: center;
@@ -1057,6 +1247,7 @@ ul, ol, dl {
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
+  align-items: center;
 }
 .hide {
   display:none;
@@ -1086,7 +1277,7 @@ ul, ol, dl {
   margin-bottom: 24px;
 }
 .yotpo{
-  margin-left: 60px;
+  margin-bottom: 10px;
 }
 .productView-info-name{
   display: inline-block;
@@ -1389,6 +1580,15 @@ element.style {
   padding: 20px;
   font-size: 18px;
   margin-bottom: 30px;
+
+  &.mobile {
+    // background: $alabaster;
+    color: $color_tundora_approx;
+    max-width: none;
+    width: 100%;
+    border: 15px solid #464646;
+    background: $url_bk_geometric repeat;
+  }
 }
 
 .customVideo {
@@ -1412,6 +1612,18 @@ element.style {
 
 }
 
+.quickSearchResults {
+  .productGrid {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+
+    .product {
+
+    }
+  }
+}
 
 .productView-thumbnails .productView-thumbnail-link { 
   border: none !important;

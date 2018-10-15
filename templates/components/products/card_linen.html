@@ -28,31 +28,36 @@
         {{/if}}
 
     <div class="features-bed-linen--desc">
-        <h3 class="features-bed-linen--title">
-            {{#if demo}}
-                {{name}}
-            {{else}}
-                <a href="{{url}}">{{name}}</a>
-            {{/if}}
-        </h3>
-        <div class="card-text" data-test-info-type="price">
-            <h3 class="features-bed-linen--title">
-                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                {{> components/products/price price=price}}
-                {{else}}
-                {{> components/common/login-for-pricing}}
-                {{/or}}
-            </h3>
-        </div>
+            <div class="child title">
+                <h3 class="features-bed-linen--title">
+                    {{#if demo}}
+                        {{name}}
+                    {{else}}
+                        <a href="{{url}}">{{name}}</a>
+                    {{/if}}
+                </h3>
+            </div>
+
+ 
+            <div class="child card-text" data-test-info-type="price">
+                <h3 class="features-bed-linen--title">
+                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{> components/products/price price=price}}
+                    {{else}}
+                    {{> components/common/login-for-pricing}}
+                    {{/or}}
+                </h3>
+            </div>
+
         {{> components/products/bulk-discount-rates}}
             {{#if custom_fields}}
                 {{#each custom_fields}}
                     {{#if this.name '==' 'short_description'}}
-                        <p>{{{this.value}}}</p>
+                        <div class="child custom-field"><p>{{{this.value}}}</p></div>
                     {{/if}}
                 {{/each}}
             {{/if}}
-        <div>
+        <div class="child btn-link">
             {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                 {{#if show_cart_action}}
                     {{#if has_options}}
