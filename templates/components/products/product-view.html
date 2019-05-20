@@ -168,7 +168,7 @@
                 </a>
             </div>
         </figure>
-        <ul class="productView-thumbnails"{{#gt product.images.length 5}} data-slick='{
+        <ul class="productView-thumbnails"{{#gt product.images.length 50}} data-slick='{
                 "infinite": false,
                 "mobileFirst": true,
                 "slidesToShow": 4,
@@ -195,7 +195,9 @@
                 <p>{{product.release_date}}</p>
             {{/if}}
 
-            {{> components/products/custom-size-entry product_sku=product.sku}}
+            <!-- <p>sku: {{product.id}}</p> -->
+
+            {{> components/products/custom-size-entry product_id=product.id}}
 
 
 

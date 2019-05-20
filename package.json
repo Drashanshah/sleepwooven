@@ -15,6 +15,7 @@
     "foundation-sites": "^5.5.3",
     "html5-history-api": "^4.2.7",
     "jquery": "^3.3.1",
+    "jquery-lazy": "^1.7.10",
     "jquery-migrate": "^1.4.1",
     "jstree": "vakata/jstree",
     "lazysizes": "3.0.0",

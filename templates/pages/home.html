@@ -51,7 +51,14 @@ blog:
         </div>
     </div> -->
 
-    <div class="home-top-banner">
+    {{#if carousel}}
+{{> components/carousel}}
+{{/if}}
+
+<!--     <div class="home-top-banner mobile lazy" data-src="{{cdn 'assets/img/img/homepage_banner_christmas_sale_mobile.jpg'}}"></div>
+
+    <div class="home-top-banner desktop lazy" data-src="{{cdn 'assets/img/img/home_top_banner.jpg'}}"> -->
+        
         <!--<div class="containerC d-flex">
             <div class="home-banner-img">
                 <div class="sale-box-header">
@@ -63,60 +70,48 @@ blog:
                 </div>
             </div>
         </div>-->
-        <div class="banner-text-trans desktop">
+
+        <!-- <div class="banner-text-trans desktop">
             <p>Feel the difference of a Sleep Wooven&trade; Pillowcase.</p>
-            <p>Try one now for just $2 USD! Also get up to $10 USD off your order of any Sleep Wooven product.</p>
+            <p>Try one now for just $2 USD! Also get up tp $10 USD off your order of any Sleep Wooven product.</p>
             <a href="/trial-pillowcase/" class="header-shop-now">
                 <button class="btns shop-now-btn">Shop Now</button>
             </a>
-        </div>
+        </div> -->
 
     </div>
 
-    <div class="banner-text-trans mobile">
+    <!-- <div class="banner-text-trans mobile">
         <p>Feel the difference of a Sleep Wooven&trade; Pillowcase.</p>
-        <p>Try one now for just $2 USD! Also get up to $10 USD off your order of any Sleep Wooven product.</p>
-        <a href="/trial-pillowcase/" class="header-shop-now">
-            <button class="btns shop-now-btn">Shop Now</button>
-        </a>
-    </div>
+            <p>Try one now for just $2 USD! Also get up tp $10 USD off your order of any Sleep Wooven product.</p>
+            <a href="/trial-pillowcase/" class="header-shop-now">
+                <button class="btns shop-now-btn">Shop Now</button>
+            </a>
+    </div> -->
 
-
-    <div class="features">
+    <div class="features-bed-linen">
         <div class="containerC">
-            <h2 class="main-title">High Quality Bed Linen & Lounge products</h2>
-            <div class="features-row">
-                {{#each categories}}
-                    {{#if children}}
-                        {{#each children}}
-                        <div class="features-box">
-                            <a href="{{url}}">
-                                <span class="features-icon features-{{id}}"></span>
-                                <h3 class="features-title">
-                                    {{{name}}}
-                                </h3>
-                            </a>
-                        </div>
-                        {{/each}}
-                    {{/if}}
-                {{/each}}
-            </div>
+            {{#if products.featured}}
+            {{> components/products/linen products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+            {{/if}}
         </div>
     </div>
+
+
 
 
     <div class="bedsheet-set-box">
         <div class="">
             <div class="main-row">
                 <div class="mobile half-box sale-price-count">
-                    <div class="img-background"></div>
+                    <div class="img-background lazy" data-src="{{cdn 'assets/img/img/bedsheet-set-cover.jpg'}}"></div>
                     <div class="sale-box">
                         <p class="sale-box-txt">Special Offer</p>
                         <p class="sale-box-txt">starting from</p>
                         <p class="sale-box-price">125 USD</p>
                     </div>
                 </div>
-                <div class="desktop left half-box sale-price-count">
+                <div class="desktop left half-box sale-price-count lazy" data-src="{{cdn 'assets/img/img/bedsheet-set-cover.jpg'}}">
                     <div class="sale-box">
                         <p class="sale-box-txt">Special Offer</p>
                         <p class="sale-box-txt">starting from</p>
@@ -145,7 +140,7 @@ blog:
                                 </span>
                         </li>
                     </ul>
-                    <a href="/bedding">
+                    <a href="/all-hotel-quality-products">
                         <button class="btns shop-now-btn">Shop Now</button>
                     </a>
                 </div>
@@ -153,13 +148,44 @@ blog:
         </div>
     </div>
 
-    <div class="features-bed-linen">
+    
+    <div class="features">
         <div class="containerC">
-            {{#if products.featured}}
-            {{> components/products/linen products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
-            {{/if}}
+            <h2 class="main-title">High Quality Bed Linen & Lounge products</h2>
+            <div class="features-row">
+                {{#each categories}}
+
+                <div class="features-box">
+                    <a href="{{url}}">
+                        <span class="features-icon features-{{id}}"></span>
+                        <h3 class="features-title">
+                            {{{name}}}
+                        </h3>
+                    </a>
+                </div>
+
+
+
+                {{#if children}}
+                    {{#each children}}
+                    <div class="features-box">
+                        <a href="{{url}}">
+                            <span class="features-icon features-{{id}}"></span>
+                            <h3 class="features-title">
+                                {{{name}}}
+                            </h3>
+                        </a>
+                    </div>
+                    {{/each}}
+                {{/if}}
+
+
+                {{/each}}
+            </div>
         </div>
     </div>
+
+
 
     <div class="lounge-throw-blanket">
         <div class="">
@@ -177,20 +203,20 @@ blog:
                         fashion brands. Our craftsmen take pride in their work and choice of material. A sophisticated
                         home with a timeless piece speaks to the depth and character of its inhabitants.
                     </p>
-                    <a href="/bedding">
+                    <a href="/all-hotel-quality-products">
                         <button class="btns shop-now-btn">Shop Now</button>
                     </a>
                 </div>
 
                 <div class="mobile right half-box sale-price-count">
-                    <div class="img-background"></div>
+                    <div class="img-background lazy" data-src="{{cdn 'assets/img/img/lounge-throw-blanket.jpg'}}"></div>
                     <div class="sale-box">
                         <p class="sale-box-txt">Special Offer</p>
                         <p class="sale-box-txt">starting from</p>
                         <p class="sale-box-price">125 USD</p>
                     </div>
                 </div>
-                <div class="desktop right half-box sale-price-count">
+                <div class="desktop right half-box sale-price-count lazy" data-src="{{cdn 'assets/img/img/lounge-throw-blanket.jpg'}}">
                     <div class="sale-box">
                         <p class="sale-box-txt">Special Offer</p>
                         <p class="sale-box-txt">For only</p>
@@ -215,7 +241,11 @@ blog:
                                     <a href="{{url}}">
                                         <!--img class="img-responsive slide-img" data-sizes="auto" src="{{getImage thumbnail 'blog_size'}}" alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}"-->
                                 
-                                     <img class="img-responsive slide-img" data-sizes="auto" src="{{getImage thumbnail}}" alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}">
+                                     <!-- <img class="img-responsive slide-img lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage thumbnail 'homepage_blog_img_size'}}"  alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}"> -->
+
+                                     <img class="img-responsive slide-img owl-lazy" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage thumbnail 'homepage_blog_img_size'}}"  alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}">
+
+                               
                                     </a>
                                 </div>
                                 <div class="half-box">

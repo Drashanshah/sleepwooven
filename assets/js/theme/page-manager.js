@@ -1,6 +1,7 @@
 import async from 'async';
 import $ from 'jquery';
 import 'owl.carousel';
+import 'jquery-lazy';
 
 export default class PageManager {
     constructor(context) {
@@ -13,8 +14,9 @@ export default class PageManager {
 
     loaded(next) {
 
-        console.log('load owlCarousel')
+        console.info('jquery ready load owlCarousel')
         $('.owl-carousel').owlCarousel({
+            lazyLoad:true,
             loop: false,
             margin: 10,
             nav: true,
@@ -24,6 +26,23 @@ export default class PageManager {
                 }
             }
         });
+
+        // lazyload imgs your configuration goes here
+
+        $(function() {
+            $('.lazy').Lazy({
+                // your configuration goes here
+                scrollDirection: 'vertical',
+                effect: 'fadeIn',
+                visibleOnly: true,
+                effectTime: 1000,
+                onError: function(element) {
+                    console.log('error loading ' + element.data('src'));
+                }
+            });
+        });
+
+
 
         $('.search-box').on('click', function(){
             $('#quickSearch').toggle('slow');

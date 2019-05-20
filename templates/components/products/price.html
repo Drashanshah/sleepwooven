@@ -22,6 +22,10 @@
         </div>
     {{/if}}
     {{#if price.without_tax}}
+<!--         <p>msrp without tax {{price.rrp_without_tax.value}}</p>
+        <p>non sale price without tax {{price.non_sale_price_without_tax.value}} </p>
+        <p>sale price {{price.without_tax.value}}</p>
+        <p>price saved {{price.saved.value}} </p> -->
         <div class="price-section price-section--withoutTax {{#if price.with_tax}}price-section--minor{{/if}}"  {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
             {{#if price.rrp_without_tax}}
                 <span data-product-rrp-without-tax class="price price--rrp">{{price.rrp_without_tax.formatted}}</span>
@@ -45,7 +49,7 @@
         {{#if price.saved}}
             <div class="price-section price-section--saving">
                 <span class="price">
-                    {{lang 'products.you_save' amount=price.saved.formatted}}
+                    <sup>{{lang 'products.you_save' amount=price.saved.formatted}}</sup>
                 </span>
             </div>
         {{/if}}

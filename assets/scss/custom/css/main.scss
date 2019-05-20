@@ -36,7 +36,26 @@ $url_12: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.woff);
 $url_13: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.ttf);
 $url_14: url(../fonts/fonts/Oswald-Regular/Oswald-Regular.svg#svgFontName);
 $url_15: url(../img/img/icons.png);
+
+
+// default banner
 $url_16: url(../img/img/home-top-banner.jpg);
+
+// temp banner for singles day
+// $url_16: url(../img/img/singlesDay2018_web.jpg);
+
+// temp banner for black friday sale 2018
+// $url_16: url(../img/img/homepagebanner-bfs-2.jpg);
+
+// temp banner for cyber mnonday 2018
+// $url_16: url(../img/img/homepage_banner_cyber_monday_2018.jpg);
+
+// temp banner for xmas 2018
+// $url_16: url(../img/img/homepage_banner_christmas_sale.jpg);
+
+
+
+
 $url_17: url(../img/img/bedsheet-set-cover.jpg);
 $url_18: url(../img/img/sale-bg.png);
 $url_19: url(../img/img/lounge-throw-blanket.jpg);
@@ -44,6 +63,7 @@ $url_20: url(../img/img/instalogo.png);
 $url_21: url(../img/img/bed-product-01.jpg);
 $url_22: url(../img/img/cat-bedsheet-set-cover.jpg);
 
+$url_icon_hotel_lg_feature: url(../img/img/icons-hotel-lg-feature.png);
 $url_icon_bedding_lg: url(../img/img/icons-bedding-lg.png);
 $url_icon_bedding_set_lg: url(../img/img/icons-bedding-set-lg.png);
 $url_icon_blanket_lg: url(../img/img/icons-blanket-lg.png);
@@ -418,7 +438,10 @@ ul, ol, dl {
   }
 }
 .home-top-banner {
-  background: $url_16 no-repeat center/cover transparent;
+  // background: $url_16 no-repeat center/cover transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 34.1vw;
   display: flex;
   justify-content: flex-end;
@@ -428,6 +451,24 @@ ul, ol, dl {
     flex-direction: column;
   }
 }
+
+.heroCarousel {
+  .heroCarousel-content {
+    right: inherit;
+  }
+
+  .heroCarousel-title {
+    font-family: $font_2;
+
+  }
+
+  .heroCarousel-description {
+    margin-top: 10px;
+    font-family: $font_1;
+  }
+
+}
+
 .home-banner-title {
   background: $color_akaroa_approx;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
@@ -507,8 +548,8 @@ ul, ol, dl {
   }
 }
 .features-icon {
-  width: 110px;
-  height: 83px;
+  width: 120px;
+  height: 120px;
   // background: $url_15 no-repeat;
   margin: auto;
   display: block;
@@ -517,21 +558,37 @@ ul, ol, dl {
     transform: scale(1.2);
   }
 }
-.features-28 {
+
+// all products
+.features-33 {
+  background: $url_icon_hotel_lg_feature no-repeat center
+}
+
+// bedding sets
+.features-38 {
   background: $url_icon_bedding_lg no-repeat center
 }
-.features-32 {
-  background: $url_icon_blanket_lg no-repeat center
-}
-.features-31 {
+
+// bespoke bedding
+.features-37 {
   background: $url_icon_bedding_set_lg no-repeat center
 }
-.features-30 {
+
+// blankets and throws
+.features-35 {
+  background: $url_icon_blanket_lg no-repeat center
+}
+
+// duvet covers
+.features-36 {
   background: $url_icon_duvet_lg no-repeat center
 }
-.features-29 {
+
+// pillowcase and shams
+.features-39 {
   background: $url_icon_pillowcase_lg no-repeat center
 }
+
 .features-row {
   display: flex;
   justify-content: space-between;
@@ -539,14 +596,16 @@ ul, ol, dl {
 }
 .bedsheet-set-box {
   // background: $url_17 no-repeat top left/50% $alabaster;
+
   background: $alabaster;
   height: 543px;
 
   .img-background {
-    background: $url_17 no-repeat top;
-    height: 300px;
+    // background: $url_17 no-repeat top;
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
-    background-position: right;
+    height: 300px;
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 10px;
@@ -554,7 +613,9 @@ ul, ol, dl {
   }
 
   .left.desktop {
-    background: $url_17 no-repeat top;
+    // background: $url_17 no-repeat top;
+    background-repeat: no-repeat;
+    background-position: center;
     // min-height: 543px;
     background-size: cover;
 
@@ -751,7 +812,7 @@ ul, ol, dl {
 
 
   .img-background {
-    background: $url_19 no-repeat top;
+    // background: $url_19 no-repeat top;
     height: 300px;
     background-size: cover;
     background-position: right;
@@ -762,7 +823,7 @@ ul, ol, dl {
   }
 
   .right.desktop {
-    background: $url_19 no-repeat top;
+    // background: $url_19 no-repeat top;
     // min-height: 543px;
     background-size: cover;
 
@@ -1628,3 +1689,28 @@ element.style {
 .productView-thumbnails .productView-thumbnail-link { 
   border: none !important;
 }
+
+.price--rrp {
+  color: grey;
+}
+
+.productView-price {
+  .price-section {
+    .price--withoutTax {
+        color: red;
+    }
+  }
+  .price-section--saving {
+    margin-left: 10px;
+  }
+}
+
+.arrow-section {
+  display: none;
+}
+
+.sale-box {
+  display: none;
+}
+
+

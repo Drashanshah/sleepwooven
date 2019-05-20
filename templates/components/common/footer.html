@@ -36,9 +36,18 @@
             <ul class="footer-lists">
                 <li class="footer-lists--heading">{{lang 'footer.categories'}}</li>
                 {{#each categories}}
-                <li>
-                    <a href="{{url}}">{{name}}</a>
-                </li>
+                    <li>
+                        <a href="{{url}}">{{name}}</a>
+                    </li>
+
+                    {{#if children}}
+                        {{#each children}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                        {{/each}}
+                    {{/if}}
+
                 {{/each}}
             </ul>
             <div class="footer-lists footer-subscribe-form">

@@ -14,18 +14,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         {{{stylesheet '/assets/css/theme.css'}}}
         {{ getFontsCollection }}
-        <script src="{{cdn 'assets/modernizr-custom.js'}}"></script>
-        <link rel="stylesheet" href="{{cdn 'scss/custom/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css'}}">
-        <link rel="stylesheet" href="{{cdn 'scss/custom/OwlCarousel2-2.3.4/assets/owl.carousel.min.css'}}">
+        <script defer async src="{{cdn 'assets/custom-dist/modernizr-custom.js'}}"></script>
+        <link defer async rel="stylesheet" href="{{cdn 'scss/custom/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css'}}">
+        <link defer async rel="stylesheet" href="{{cdn 'scss/custom/OwlCarousel2-2.3.4/assets/owl.carousel.min.css'}}">
 
-        <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+        <!-- <script defer async src="//code.jquery.com/jquery-3.2.1.min.js"></script> -->
+        <script defer async src="{{cdn 'assets/custom-dist/jquery-3.2.1.min.js'}}"></script>
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" /> -->
+        <link defer async rel="stylesheet" href="{{cdn 'assets/custom-dist/jquery.fancybox.min.css'}}" />
+
+        <!-- <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script> -->
+
+        <script defer async src="{{cdn 'assets/custom-dist/jquery.fancybox.min.js'}}"></script>
+
+
+        
 
         
 <!--         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
  -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<!--         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+
+        <link rel="stylesheet" href="{{cdn 'assets/custom-dist/fontawesome-free-5.5.0-web/css/all.min.css'}}" >
+
+
 
 
         {{{head.scripts}}}
@@ -37,6 +50,32 @@
         {{inject 'urls' urls}}
         {{{snippet 'htmlhead'}}}
     </head>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v3.2'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="873724189462143"
+      theme_color="#7E83C0">
+    </div>
+
     <body>
 
         {{> components/common/google-tag-manager-body }}
@@ -62,6 +101,9 @@
             <script>
                 // Exported in app.js
                 window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+
+
+
             </script>
 
 
